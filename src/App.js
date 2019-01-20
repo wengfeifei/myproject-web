@@ -3,6 +3,13 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(console.log('这是一个延迟加载请求'))
+      }, 2000);
+    });
+  }
   render() {
     return (
       <div className="App">
